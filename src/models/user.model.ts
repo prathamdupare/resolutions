@@ -3,6 +3,7 @@ import mongoose, { Schema, models } from "mongoose";
 interface IUser {
   name: string;
   email: string;
+  image?: string;
 }
 
 const userSchema = new Schema<IUser>(
@@ -15,6 +16,9 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
       unique: true,
+    },
+    image: {
+      type: String,
     },
   },
   { timestamps: true }

@@ -1,12 +1,12 @@
-import db from "@/db/db";
-import User from "@/db/models/user";
+import db from "@/lib/db";
+import User from "@/models/user.model";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const { name, email } = await req.json();
+  const { name, email, image } = await req.json();
   await db();
-  await User.create({ name, email });
-  return NextResponse.json({ name, email }, { status: 201 });
+  await User.create({ name, email, image });
+  return NextResponse.json({ name, email, image }, { status: 201 });
 }
 
 export async function GET() {
