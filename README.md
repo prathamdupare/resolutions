@@ -60,3 +60,4 @@ To learn more about Next.js, take a look at the following resources:
 
 
 **Start your project in minutes! 🚀**
+# resolutions
